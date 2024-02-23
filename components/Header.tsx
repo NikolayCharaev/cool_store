@@ -8,13 +8,12 @@ import favoriteIcon from '@/public/like.svg';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import Logo from './Logo';
 
 const Header = () => {
   return (
     <header className="container my-6 flex justify-between items-center">
-      <Link href="/">
-        <Image src={logo} alt="logo" width={78} height={32} />
-      </Link>
+      <Logo />
       <div className="flex items-center gap-2.5">
         <div className="bg-dark w-9 h-9 rounded-full flex justify-center items-center">
           <Image src={noAuth} width={22} height={19} alt="profile-icon" />
@@ -27,7 +26,7 @@ const Header = () => {
             <Image width={13} height={13} src={searchIcon} alt="search-icon" />
           </span>
           <input
-            className="rounded-md w-[303px] text-[9px] focus:outline-none bg-dark px-[38px] py-[7px] text-white"
+            className="rounded-md w-[303px] text-lg focus:outline-none bg-dark px-[38px] py-[7px] text-white"
             type="text"
             placeholder="Search for anything..."
           />
@@ -37,10 +36,12 @@ const Header = () => {
       <div className="flex items-center gap-x-5">
         <Image width={24} height={24} src={favoriteIcon} alt="like-icon" />
         <div className="relative">
-          <Image width={24} height={24} src={basketIcon} alt="basket-icon" />
-          <span className="absolute flex justify-center items-center right-0 bottom-0 bg-blueviolet-light p-2 w-3 h-3 text-center text-white rounded-full  text-[9px]">
-            1
-          </span>
+          <Link href='/basket'>
+            <Image width={24} height={24} src={basketIcon} alt="basket-icon" />
+            <span className="absolute flex justify-center items-center right-0 bottom-0 bg-blueviolet-light p-2 w-3 h-3 text-center text-white rounded-full  text-[9px]">
+              1
+            </span>
+          </Link>
         </div>
       </div>
     </header>

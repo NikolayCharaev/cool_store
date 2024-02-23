@@ -1,10 +1,15 @@
-import Image from "next/image";
-import Provider from "@/components/Provider";
-import Header from "@/components/Header";
+import Banner from '@/components/Banner';
+import Categories from '@/components/Categories';
+import Provider from '@/components/Provider';
 export default function Home() {
   return (
     <Provider>
-      <Header/>
+      <div className="container">
+          <div className="flex justify-between mb-[19px] gap-[20px] h-[423px]">
+            <Categories/>
+            <Banner/>
+          </div>
+      </div>
     </Provider>
   );
 }
