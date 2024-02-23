@@ -1,6 +1,7 @@
 import Banner from '@/components/Banner';
 import Categories from '@/components/Categories';
-import Provider from '@/components/Provider';
+import Provider from '@/components/provider/Provider';
+import Trending from '@/components/Trending';
 export default function Home() {
   return (
     <Provider>
@@ -9,6 +10,7 @@ export default function Home() {
             <Categories/>
             <Banner/>
           </div>
+          <Trending/>
       </div>
     </Provider>
   );
